@@ -1,0 +1,41 @@
+/*  №3 */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.js-gallery {
+    display: flexbox;
+    flex-direction: column;
+}
+.js-gallery li {
+    max-width: 350px;
+    margin: 30px 0;
+    box-shadow: 0px 0px 50px -10px;
+    list-style: none;
+}
+
+/* №6 */
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+/* /* №7 */
+#text {
+  font-size: 30px;
+} 
+
+
+
+
+
+
+
