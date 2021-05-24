@@ -14,10 +14,9 @@ function onFocusInput() {
   inputRef.classList.remove(`invalid`);
 }
 function onBlurInput() {
-    const value = inputRef.value.trim();
+  const value = inputRef.value.trim();
     value.length === Number(inputRef.getAttribute(`data-length`)) ?
-        inputRef.classList.add(`valid`) :inputRef.classList.add(`invalid`);
-
+      inputRef.classList.add(`valid`) :inputRef.classList.add(`invalid`);
 }
 
 
