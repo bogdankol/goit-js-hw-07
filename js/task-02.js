@@ -12,12 +12,12 @@ const ingredients = [
 
 const listRef = document.querySelector(`#ingredients`);
 
-ingredients.forEach(ingredient => {
+const lis = ingredients.map(ingredient => {
   const liRef = document.createElement(`li`);
   liRef.textContent = ingredient;
-  listRef.appendChild(liRef)
+  return liRef;
 })
-
+listRef.append(...lis)
 
 
 

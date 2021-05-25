@@ -27,9 +27,19 @@ const images = [
 const galleryRef = document.querySelector(`#gallery`)
 galleryRef.classList.add(`js-gallery`);
 
-images.forEach(({ url, alt }) => {
-  galleryRef.insertAdjacentHTML(`beforeend`, `<li><img src=${url} alt=${alt}></img></li>`)
+const lis = images.map(({ url, alt }) => {
+  const liEl = document.createElement(`li`);
+  liEl.insertAdjacentHTML(
+    `beforeend`,
+    `<img src=${url} alt=${alt}></img>`
+  );
+  return liEl;
 })
+galleryRef.append(...lis)
+
+
+
+
 
 
 // другой способ
@@ -43,6 +53,13 @@ images.forEach(({ url, alt }) => {
 //     galleryRef.appendChild(liEl); 
 // })
 
+//третий способ - оптимизация
+// images.forEach(({ url, alt }) => {
+//   galleryRef.insertAdjacentHTML(
+//     `beforeend`,
+//     `<li><img src=${url} alt=${alt}></img></li>`
+//   );
+// });
 
 
 
